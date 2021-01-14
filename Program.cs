@@ -86,7 +86,13 @@ namespace Avanade.Bank
 
 			Console.Write("Digite 1 para Conta Fisica ou 2 para Juridica: ");
 			int entradaTipoConta = int.Parse(Console.ReadLine());
-			
+			while (entradaTipoConta != 1 && entradaTipoConta != 2)
+			{
+				Console.WriteLine("O valor digitado não corresponde com as opções acima.");
+				Console.Write("Digite 1 para Conta Fisica ou 2 para Juridica: ");
+				entradaTipoConta = int.Parse(Console.ReadLine());
+			}
+
 
 			Console.Write("Digite o Nome do Cliente: ");
 			string entradaNome = Console.ReadLine();
@@ -96,7 +102,13 @@ namespace Avanade.Bank
 
 			Console.Write("Digite o crédito: ");
 			double entradaCredito = double.Parse(Console.ReadLine());
-			
+			while (entradaCredito < 0)
+			{
+				Console.WriteLine("O crédito não pode ser negativo.");
+				Console.Write("Digite um valor positivo para o crédito: ");
+				entradaCredito = double.Parse(Console.ReadLine());
+			}
+
 
 			Conta novaConta = new Conta(tipoConta: (TipoConta)entradaTipoConta,
 										saldo: entradaSaldo,
