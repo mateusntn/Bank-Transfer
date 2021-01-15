@@ -139,7 +139,7 @@ namespace Avanade.Bank
 		private static string ObterOpcaoUsuario()
 		{
 			Console.WriteLine();
-			Console.WriteLine("DIO Bank a seu dispor!!!");
+			Console.WriteLine("Avanade Bank a seu dispor!!!");
 			Console.WriteLine("Informe a opção desejada:");
 
 			Console.WriteLine("1- Listar contas");
